@@ -49,6 +49,86 @@ Route::get('/', array('uses'=>'home::home@index'));
 |
 */
 
+
+
+
+Event::listen("app.400",
+        function() {
+
+            $response = new stdClass;
+            $response->code = 400;
+            $response->messages[] = Lang::line("account::events.messages.invalidinput")
+                    ->get();
+            return Response::json($response, $response->code);
+        });
+
+
+Event::listen("app.500",
+        function() {
+
+            $response = new stdClass;
+            $response->code = 500;
+            $response->messages[] = Lang::line("account::events.messages.500")
+                    ->get();
+            return Response::json($response, $response->code);
+        });
+
+Event::listen("app.404",
+        function($message = null) {
+            $response = new stdClass();
+            $response->code = 404;
+            if (is_null($message))
+                $response->messages[] = Lang::line("account::messages.404")->get();
+            else
+                $response->messages[] = $message;
+            return Response::json($response, 404);
+        });
+
+Event::listen("app.validationerror",
+        function ( $code, $messages) {
+
+            $response = new stdClass();
+            if (is_array($messages))
+                $response->messages = $messages;
+            else
+                $response->messages[] = $messages;
+
+            $response->code = $code;
+            return Response::json($response, $response->code);
+        });
+        
+
+
+
+
+Event::listen("app.success",
+        function ($code, $messages = null, $data = null) {
+            $response = new stdClass();
+            $response->code = $code;
+            if (is_array($messages))
+                $response->messages = $messages;
+            elseif (!is_null($messages))
+                $response->messages[] = $messages;
+            if (!is_null($data)) {
+                if (is_a($data, "\Laravel\Paginator")) {
+                    $dataArray = array();
+                    foreach ($data->results as $object) {
+                        array_push($dataArray, $object->to_array());
+                    }
+                    $response->data = $data;
+                    $response->data->results = $dataArray;
+                }
+                else {
+                    $response->data = $data;
+                }
+            }
+
+
+            return Response::json($response, $response->code);
+        });
+
+
+
 Event::listen('404', function()
 {
 	return Response::error('404');
