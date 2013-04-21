@@ -19,6 +19,20 @@ class Home_Home_Controller extends Home_Base_Controller {
     public function get_faq(){
       return View::make('home::pages.faq');  
     }
+    
+    public function get_schedules_ajax($slug=null){
+        if($slug!=null){
+            $schedule = new \Home\Models\Schedule;
+            $thisschedule = $schedule::find($slug);
+            
+            $sat = new \Home\Models\Satellite;
+            $thissat = $sat::find($thisschedule->satellite_id);
+            return View::make("home::pages.modal")
+                        ->with("schedule", $thisschedule)
+                ->with('sat',$thissat);
+        }
+        
+    }
 
     public function post_editchooser() {
         $sat_id = Input::get('sat_id');
@@ -86,6 +100,7 @@ class Home_Home_Controller extends Home_Base_Controller {
         $satellite->save();
 
         //return
+        return Redirect::to('/home/satellites/profile/' . $id)->with('message', 'You have edited the observatory successfully');
     }
 
     public function get_satellite_editor_picker() {
@@ -139,6 +154,11 @@ class Home_Home_Controller extends Home_Base_Controller {
             $satellite->image_url = 'img/satimgs/' . $filename;
         }
         $satellite->save();
+        
+        $sat = $satellite::where('name', '=', Input::get('satellite_name'))->first();
+        
+                return Redirect::to('/home/satellites/profile/' . $sat->id)->with('message', 'You have added the observatory successfully');
+
     }
 
     public function get_schedule() {
@@ -158,7 +178,7 @@ class Home_Home_Controller extends Home_Base_Controller {
             $start_time = $row["start_time"];
             $haha = date("m-d-Y", strtotime($start_time));
            
-            $target = "<a href='#' class='calclass".$row['satellite_id']."'>".$row["target"]."</a>";
+            $target = "<a href='#' class='calclass".$row['satellite_id']."' id='".$row['id']."' data-toggle='modal' data-target='#myModal' >".$row["target"]."</a>";
             if (isset($cal_array[$haha])){
                 $target.= $cal_array[$haha];  
                  $cal_array = array_merge($cal_array, array($haha => $target));
@@ -180,7 +200,7 @@ class Home_Home_Controller extends Home_Base_Controller {
 
 
 
-        return View::make('home::pages.schedulepage')->with("schedule", $data2);
+        return View::make('home::pages.schedulepage')->with("schedule", $data2)->with("schedules",$schedules);
     }
 
     public function get_parser() {

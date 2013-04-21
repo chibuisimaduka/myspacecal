@@ -17,6 +17,9 @@
         <!--Portfolio feature item-->
         <div class="row">
           <div class="span4">
+               @if(Session::get('message'))
+        {{Alert::success(Session::get('message'))}}
+        @endif
             <!-- Slider for project pictures -->
             <div id="carousel-project" class="carousel slide">
               <div class="carousel-inner">

@@ -68,7 +68,7 @@
         <span class="span2"><b>Launch Date:</b></span><span class="span4"><input type="text"  id="launch_date" class="input-block-level"  name ="launch_date" value="{{$satellite->launch_date}}" placeholder="Date of launch" required></span><br>
           <span class="span2"><b>Launch Location:</b></span><span class="span4"><input type="text" class="input-block-level"  name ="launch_location" value="{{$satellite->launch_location}}" placeholder="Location of Launch" required></span><br>
           <span class="span2"><b>Website:</b></span><span class="span4"><input type="text" class="input-block-level"  name ="website" value="{{$satellite->website}}" placeholder="Website URL"></span><br>
-        <span class="span2"><b>Description:</b></span><span class="span4"><textarea class="input-block-level" name ="description" value="{{$satellite->description}}" placeholder="Short Description of the Satellite" required></textarea></span><br>
+        <span class="span2"><b>Description:</b></span><span class="span4"><textarea class="input-block-level" name ="description" value="{{$satellite->description}}" placeholder="Short Description of the Satellite" required>{{$satellite->description}}</textarea></span><br>
 
         <span class="span2"><b>Image:</b></span><span class="span4"><input type="file" class="input-block-level" id ="uploadImage" name ="ImageUrl" value="Civil" onchange="PreviewImage();"></span><br>
 

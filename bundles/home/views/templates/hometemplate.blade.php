@@ -55,6 +55,7 @@
                      
                                     </li>   
                                     <li><a href="{{URL::to('/home/faq')}}">FAQ</a></li>
+                                    <li><a href="{{URL::to('/docs')}}">Api Docs</a></li>
                                 </ul>               
                             </div><!--/.nav-collapse -->
                         </div>
@@ -73,53 +74,35 @@
                         <div class="span6 col blog-list blog-list-short">
                             <h3><strong>Subscribe to our Newsletter:</strong></h3>
                            <!-- Short blog post -->
+                          <div class="media row">             
+              <div class="media-body span6">  
+                <!-- Meta details -->
+                <ul class="inline meta">
+                  <li><i class="icon-calendar"></i> <span class="visible-desktop">Created:</span> Tue 11th Dec 2012</li>
+                  <li><i class="icon-user"></i> <span class="visible-desktop">By</span> <a href="#">Nomad</a></li>
+                </ul>
+                <h5 class="title media-heading"><a href="#">MySpaceCal up and running at Hackathon</a></h5>
+              </div>
+            </div>
                             <div class="media row">             
-                                <div class="media-body span6">  
-                                    <!-- Meta details 
-                                    <ul class="inline meta">
-                                        <li><i class="icon-calendar"></i> <span class="visible-desktop">Created:</span> Fri 30th Nov 2012</li>
-                                        <li><i class="icon-user"></i> <span class="visible-desktop">By</span> <a href="team-member.htm">Joe</a></li>
-                                    </ul>
-                                    <h5 class="title media-heading"><a href="blog-post.htm">Turpis odio dictumst tempor ac et!</a></h5>
-                                -->
-                               <form name="ccoptin" action="http://visitor.r20.constantcontact.com/d.jsp" target="_blank" method="post" style="margin-bottom:3;">
-                                   
-<font style="font-weight: bold; font-family:Arial; font-size:16px;">E-mail *</font>
-<input type="text" name="ea" size="20" value="" style="font-family:Verdana,Geneva,Arial,Helvetica,sans-serif; font-size:10px; border:1px solid #999999;">
-<input type="submit" name="go" value="GO" class="btn "  style="font-family:Verdana,Arial,Helvetica,sans-serif; font-size:10px;">
-<input type="hidden" name="llr" value="bgba49lab">
-<input type="hidden" name="m" value="1112227710145">
-<input type="hidden" name="p" value="oi">
-</form>
-                                
-                                <!-- BEGIN: SafeSubscribe -->
-<div align="left">
-    <span>
-                                       <img src="https://imgssl.constantcontact.com/ui/images1/visitor/email1_trans.gif" alt="Email Newsletter icon" border="0"></span>
-<img src="https://imgssl.constantcontact.com/ui/images1/safe_subscribe_logo.gif" border="0" width="168" height="14" alt=""/>
-</div>
-<!-- END: SafeSubscribe -->
-
-<!-- BEGIN: Email Marketing you can trust -->
-<div align="left" style="font-family:Arial,Helvetica,sans-serif;font-size:10px;color:#999999;">
-For <a href="http://www.constantcontact.com/jmml/email-marketing.jsp" style="text-decoration:none;font-family:Arial,Helvetica,sans-serif;font-size:10px;color:#999999;" target="_blank">Email Marketing</a> you can trust
-</div>
-<!-- END: Email Marketing you can trust -->
-                                
-                                
-                                </div>
-                            </div>
+              <div class="media-body span6">  
+                <!-- Meta details -->
+                <ul class="inline meta">
+                  <li><i class="icon-calendar"></i> <span class="visible-desktop">Created:</span> Fri 30th Nov 2012</li>
+                  <li><i class="icon-user"></i> <span class="visible-desktop">By</span> <a href="team-member.htm">Nightmare365</a></li>
+                </ul>
+                <h5 class="title media-heading"><a href="blog-post.htm">Spaceappschallenge is awesome!!!!</a></h5>
+              </div>
+            </div>
 
                         </div>      
                         <div class="span4 col contact-block">
                             <!--@todo: replace with company contact details-->
-                            <h3><strong>Company:</strong></h3>
+                            <h3><strong>Affiliates:</strong></h3>
                             <address>
-                                <p><a href ="http://www.es-wireless.com" target ="_blank"> ES-Wireless</a></p>
-                                <p><a href ="http://www.eswireless.re-fill.me" target ="_blank"> Prepaid Online Payments</a></p>
-                                <p><a href ="#"> Genius Unlock</a></p>
-                                <p><a href ="http://www.es-wirelessphones.com" target ="_blank"> Phones</a></p>
-                                <p><a href ="http://www.mycellparts.com" target ="_blank"> My Cell Parts</a></p>
+                                <p><a href ="http://www.nasa.gov/" target ="_blank"> NASA</a></p>
+                                <p><a href ="http://integral.esa.int/mySpaceCal/" target ="_blank"> mySpace Cal</a></p>
+                              
                             </address>
                         </div>
                         <div class="span2 col social-media">

@@ -40,6 +40,7 @@
                 <div class="pull-left">
                     <h2> Some Commonly asked questions about Satellites:</h2>
                     <h3>How is the direction a satellite is pointing to determined?</h3>
+                    <h6>What is meant by R.A. and Dec?</h6>
                     <p>
                         The <b>Equatorial Coordinate System</b> is used. 
                         

@@ -46,12 +46,30 @@
 			
     });
     
-//$(document).ready(function(){
+$(document).ready(function(){
 // var ah = $('#calendar').width();
 // var width = ah/7; 
 // console.log(width);
 // $(".fc-calendar .fc-row > div, .fc-calendar .fc-head > div").css('width:'+width);
-//});
+$("#calendar a").click(function(){
+   var haha= $(this).attr("id");
+   //console.log(haha);  
+    $.get("{{URL::to('home/schedules/get/')}}"+haha, function(data, status) {
+//                        alert(status);
+
+                            if (status) {
+                                $(".modal-body").html(data);
+                             //    $("#myModal").modal('hide');
+                               //  $("#myModal").modal('show');
+                             //   $('#filesManagerModal').modal({show: true});
+                               
+
+                            }
+                        });
+   
+});
+
+});
     
 </script>
 
@@ -83,6 +101,24 @@
                 </div>
                 <div id="calendar" class="fc-calendar-container"></div>
             </div>
+            <div class="modal hide fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                            <h3 id="myModalLabel">Schedule Info:</h3>
+                        </div>
+                        <div class="modal-body">
+                            <div class="span2 pull-left">
+                            </div>
+                            <div class="span3 pull-right"><p></p>
+                            </div>
+
+
+                        </div>
+                        <div class="modal-footer">
+                            <button class="btn" data-dismiss="modal" aria-hidden="true">Close</button>
+
+                        </div>
+                    </div>   
             
         </div>
     </div>

@@ -4,8 +4,7 @@
 }
 
 .custom-calendar-full {
-	height:auto;
-        
+	height:auto;       
 }
 
 .fc-calendar-container {
@@ -236,7 +235,7 @@
 	font-size: 12px;
 	text-transform: uppercase;
 	display: inline-block;
-	padding: 0px 0px;
+	padding: 3px 5px;
 	border-radius: 3px;
 	white-space: nowrap;
 	overflow: hidden;
