@@ -243,15 +243,17 @@
 	text-overflow: ellipsis;
 	max-width: 100%;
 	margin-bottom: 1px;
-	background: rgba(255,255,255,0.1);
+	
 }
+
+
 
 .no-touch .fc-calendar .fc-row > div > div a:hover {
 	background: rgba(255,255,255,0.3);
 }
 
 @media screen and (max-width: 880px) , screen and (max-height: 450px) {
-	html, body, .container {
+	html, body, .container,.backer {
 		height: auto;
 	}
 
@@ -342,4 +344,10 @@
 		font-size: 10px;
 		text-transform: uppercase;
 	}
+}
+.calclass1{
+    background: rgba(55,255,255,0.1);
+}
+.calclass2{
+    background: rgba(255,55,255,0.1);
 }

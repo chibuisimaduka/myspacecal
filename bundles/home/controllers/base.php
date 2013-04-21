@@ -36,6 +36,7 @@ class Home_Base_Controller extends Controller {
                 ->add('collapse', "js/bootstrap-collapse.js")
                 ->add('carousel', "js/bootstrap-carousel.js")
                 ->add('typeahead', "js/bootstrap-typeahead.js")
+                ->add('datepicker', "js/bootstrap-datepicker.js")
                 //<!--Non-Bootstrap JS-->
                 ->add('quicksand', "js/jquery.quicksand.js")
                 ->add('flexslider', "js/jquery.flexslider-min.js")

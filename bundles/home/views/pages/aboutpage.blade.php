@@ -39,7 +39,7 @@ As a result, a large percentage of our business comes from repeat customers or r
           </div>
           
           <!-- sidebar -->
-          <div class="span4 sidebar sidebar-right">
+          <div class="span4 sidebar sidebar-left">
             <div class="inner">
               <div class="block">
                 <h3 class="block-title sub-title"><span>About Menu</span></h3>

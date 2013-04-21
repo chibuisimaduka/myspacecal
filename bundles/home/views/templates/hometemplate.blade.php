@@ -46,25 +46,15 @@
                                     <li><a href="{{URL::to('/home/home/schedule')}}">Schedule</a></li>
                                     
                                     <li class="dropdown">
-                                        <a href="{{URL::to('/home/home/about')}}" id="about-drop">About</a>
-                                        <!-- Dropdown Menu -->
-                     
-                                    </li>
-
-                                    <li><a href="{{URL::to('/home/home/blog')}}">Blog</a></li>
-                                    <li><a href="{{URL::to('/home/home/contact')}}">Contact</a></li>
-                                    <li class="dropdown">
-                                        <a href="more.htm" class="dropdown-toggle" id="more-drop" data-toggle="dropdown">More +</a>
+                                        <a href="{{URL::to('/home/satellites/edit')}}" class="dropdown-toggle" id="about-drop" data-toggle="dropdown">Satellites +</a>
                                         <!-- Dropdown Menu -->
                                         <ul class="dropdown-menu" role="menu" aria-labelledby="more-drop">
-                                            <li role="menuitem"><a href="{{URL::to('/home/home/privacy')}}" tabindex="-1">Privacy & Security</a></li>
-                                            <li role="menuitem"><a href="{{URL::to('/home/home/faq')}}" tabindex="-1">FAQ</a></li>
-                                            <li role="menuitem"><a href="starter.htm" tabindex="-1">Testimonials</a></li>
-                                            <li role="menuitem"><a href="{{URL::to('/home/home/instructions')}}" tabindex="-1">Unlocking Instructions</a></li>
-                                            <li role="menuitem"><a href="{{URL::to('/home/home/terms')}}" tabindex="-1">Terms and Conditions</a></li>
-                                        </ul>
-                                    </li>
-
+                                            <li role="menuitem"><a href="{{URL::to('/home/satellites/add')}}" tabindex="-1">Add</a></li>
+                                            <li role="menuitem"><a href="{{URL::to('/home/satellites/edit')}}" tabindex="-1">Edit</a></li>
+                                           </ul>
+                     
+                                    </li>   
+                                    <li><a href="{{URL::to('/home/faq')}}">FAQ</a></li>
                                 </ul>               
                             </div><!--/.nav-collapse -->
                         </div>

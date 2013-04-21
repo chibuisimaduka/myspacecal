@@ -17,9 +17,10 @@ class Home_Create_Satellites_Table {
                      $table->string('companies')->nullable();
                     $table->string('orbit_height')->nullable();
                      $table->string('type');
-                    $table->text('description')->nullable();                   
+                    $table->text('description')->nullable(); 
+                     $table->text('website')->nullable();  
                     $table->string('launch_date')->nullable();
-                    $table->string('launch-location')->nullable();
+                    $table->string('launch_location')->nullable();
                     $table->timestamps();
                 });
 	}

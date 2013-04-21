@@ -35,19 +35,14 @@
         }
 
         // you can also add more data later on. As an example:
-        /*
-                                someElement.on( 'click', function() {
-					
-                                        cal.setData( {
-                                                '03-01-2013' : '<a href="#">testing</a>',
-                                                '03-10-2013' : '<a href="#">testing</a>',
-                                                '03-12-2013' : '<a href="#">testing</a>'
-                                        } );
+    
+                               					
+                                        cal.setData( <?php echo $schedule ?> );
                                         // goes to a specific month/year
-                                        cal.goto( 3, 2013, updateMonthYear );
+                                      //  cal.goto( 3, 2013, updateMonthYear );
 
-                                } );
-         */
+                               
+         
 			
     });
     
