@@ -1,3 +1,4 @@
+Site can be found temporarily  at http://sats.sapamatech.com
 # [Laravel](http://laravel.com) - A PHP Framework For Web Artisans
 
 Laravel is a clean and classy framework for PHP web development. Freeing you
